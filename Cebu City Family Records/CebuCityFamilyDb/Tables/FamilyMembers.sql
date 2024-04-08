@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[FamilyMembers]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Name] VARCHAR(50) NOT NULL, 
+    [FId] INT NOT NULL,
+    CONSTRAINT [FK_FamilyMembers] FOREIGN KEY ([FId]) REFERENCES [Family]([Id]) ON DELETE CASCADE
+)
